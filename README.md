@@ -4,6 +4,7 @@
 
 Optimove is engineered with a strict **Data Privacy Architecture**: all calculations, placements, and operational reports are generated dynamically in temporary session memory and are **never** persisted to server-side databases or plan histories.
 
+## Live Demo - https://smart-truck-optimisation.streamlit.app/
 ---
 
 ## 🎨 Approved Brand Theme

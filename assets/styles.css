@@ -1,0 +1,402 @@
+/*
+assets/styles.css
+Optimove Enterprise Design System
+Brand Palette:
+- Primary Wine Red: #7F011F
+- Deep Wine Gradient: linear-gradient(135deg, #7F011F 0%, #4D0013 100%)
+- Light Sand Surface: #F5EBD0
+- Sand Border: #E2D8C3
+- Warm White: #FAF7F2
+- Dark Charcoal Text: #1F1F1F
+- Valid Forest Green: #1E7E34
+- Invalid Alert Red: #C82333
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+/* Base Global Reset & Typography */
+html, body, [class*="css"], .stApp {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+    color: #1F1F1F;
+    background-color: #FAF7F2 !important;
+}
+
+/* Headings */
+h1, h2, h3, h4, .outfit-font {
+    font-family: 'Outfit', sans-serif !important;
+    letter-spacing: -0.3px;
+}
+
+/* Streamlit Header & Clutter Cleanup */
+header[data-testid="stHeader"] {
+    background: transparent !important;
+    display: none !important;
+}
+#MainMenu, footer {
+    visibility: hidden;
+}
+
+/* Master Enterprise App Header */
+.optimove-brand-shell {
+    background: linear-gradient(135deg, #7F011F 0%, #4D0013 100%);
+    border-radius: 10px;
+    padding: 20px 28px;
+    margin-bottom: 18px;
+    box-shadow: 0 4px 18px rgba(127, 1, 31, 0.16);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #D4C5A9;
+}
+
+.brand-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.brand-icon-box {
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    background: rgba(245, 235, 208, 0.15);
+    border: 1px solid rgba(245, 235, 208, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.brand-name {
+    font-family: 'Outfit', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #FFFDF9;
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+    margin: 0;
+}
+
+.brand-tagline {
+    font-size: 12.5px;
+    color: #F5EBD0;
+    margin-top: 3px;
+    opacity: 0.95;
+    font-weight: 400;
+}
+
+.brand-right-pills {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.shell-pill-privacy {
+    background: rgba(245, 235, 208, 0.18);
+    border: 1px solid rgba(245, 235, 208, 0.4);
+    color: #F5EBD0;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.shell-pill-fleet {
+    background: #FFFDF9;
+    color: #7F011F;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Nav Bar Controls */
+.nav-step-container {
+    background: #FFFFFF;
+    border: 1px solid #E2D8C3;
+    border-radius: 8px;
+    padding: 8px 12px;
+    margin-bottom: 22px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+
+/* Vehicle Grid Cards */
+.vehicle-grid-card {
+    background: #FFFFFF;
+    border: 2px solid #E2D8C3;
+    border-radius: 10px;
+    padding: 16px;
+    transition: all 0.22s ease-in-out;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.vehicle-grid-card:hover {
+    border-color: #7F011F;
+    box-shadow: 0 6px 18px rgba(127, 1, 31, 0.12);
+    transform: translateY(-2px);
+}
+
+.vehicle-grid-card.is-active {
+    border: 2.5px solid #7F011F !important;
+    background: #FFFEFA !important;
+    box-shadow: 0 8px 22px rgba(127, 1, 31, 0.18) !important;
+}
+
+.vehicle-card-badge-top {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: #7F011F;
+    color: #FFFFFF;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    border-radius: 12px;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 5px rgba(127,1,31,0.3);
+}
+
+.vehicle-title-text {
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #7F011F;
+    margin-top: 6px;
+    margin-bottom: 2px;
+}
+
+.vehicle-category-sub {
+    font-size: 11px;
+    color: #777777;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.vehicle-spec-table {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 12px;
+    border-collapse: collapse;
+}
+
+.vehicle-spec-table td {
+    padding: 5px 0;
+    font-size: 12px;
+    border-bottom: 1px dashed #EDE5D5;
+}
+
+.vehicle-spec-table td.label-col {
+    color: #666666;
+    font-weight: 500;
+}
+
+.vehicle-spec-table td.val-col {
+    color: #1F1F1F;
+    font-weight: 600;
+    text-align: right;
+}
+
+.vehicle-spec-table tr:last-child td {
+    border-bottom: none;
+}
+
+.badge-unverified-warning {
+    background: #FFF8E1;
+    color: #8D6E11;
+    border: 1px solid #FFE082;
+    padding: 5px 9px;
+    border-radius: 5px;
+    font-size: 10.5px;
+    font-weight: 600;
+    margin-top: 10px;
+    line-height: 1.3;
+}
+
+.badge-verified-fleet {
+    background: #E8F5E9;
+    color: #2E7D32;
+    border: 1px solid #A5D6A7;
+    padding: 5px 9px;
+    border-radius: 5px;
+    font-size: 10.5px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+/* Metric KPI Containers */
+.enterprise-kpi {
+    background: #FFFFFF;
+    border: 1px solid #E2D8C3;
+    border-radius: 8px;
+    padding: 14px 16px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+    border-top: 4px solid #7F011F;
+    text-align: center;
+    transition: transform 0.15s ease;
+}
+
+.enterprise-kpi:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.enterprise-kpi .kpi-label {
+    font-size: 10.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #6C757D;
+    letter-spacing: 0.6px;
+}
+
+.enterprise-kpi .kpi-number {
+    font-family: 'Outfit', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #7F011F;
+    margin: 4px 0 2px 0;
+}
+
+.enterprise-kpi .kpi-subtext {
+    font-size: 11px;
+    color: #777777;
+    font-weight: 500;
+}
+
+/* Status Alert Banners */
+.audit-banner-valid {
+    background: #EBF7EE;
+    color: #1B5E20;
+    border: 1.5px solid #A3D9A5;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 13.5px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.audit-banner-partial {
+    background: #FFF9E6;
+    color: #8C6B00;
+    border: 1.5px solid #FFE082;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 13.5px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.audit-banner-invalid {
+    background: #FDF2F2;
+    color: #9C1B28;
+    border: 1.5px solid #F5C2C7;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 13.5px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Surface Container Card */
+.surface-card {
+    background: #FFFFFF;
+    border: 1px solid #E2D8C3;
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-bottom: 18px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+
+.surface-card-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: #7F011F;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Button Upgrades */
+div.stButton > button {
+    background-color: #7F011F !important;
+    color: #FAF7F2 !important;
+    border: 1px solid #540015 !important;
+    border-radius: 7px !important;
+    font-weight: 600 !important;
+    font-size: 13.5px !important;
+    padding: 8px 18px !important;
+    letter-spacing: 0.2px;
+    transition: all 0.18s ease-in-out !important;
+}
+
+div.stButton > button:hover {
+    background-color: #9E0127 !important;
+    color: #FFFFFF !important;
+    box-shadow: 0 4px 12px rgba(127, 1, 31, 0.22) !important;
+    border-color: #7F011F !important;
+    transform: translateY(-1px);
+}
+
+div.stDownloadButton > button {
+    background-color: #F5EBD0 !important;
+    color: #7F011F !important;
+    border: 1px solid #D4C5A9 !important;
+    border-radius: 7px !important;
+    font-weight: 600 !important;
+    font-size: 13px !important;
+    transition: all 0.18s ease-in-out !important;
+}
+
+div.stDownloadButton > button:hover {
+    background-color: #EDE2C2 !important;
+    color: #4D0013 !important;
+    border-color: #7F011F !important;
+    box-shadow: 0 2px 8px rgba(127, 1, 31, 0.12) !important;
+}
+
+/* Forms & Text Input Polish */
+div[data-baseweb="input"] {
+    background-color: #FFFFFF !important;
+    border-color: #D4C5A9 !important;
+    border-radius: 6px !important;
+}
+
+div[data-baseweb="select"] {
+    background-color: #FFFFFF !important;
+    border-color: #D4C5A9 !important;
+    border-radius: 6px !important;
+}
+
+/* Dataframe Clean Framing */
+[data-testid="stDataFrame"] {
+    border: 1px solid #E2D8C3;
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+/* Progress bar in Wine Red */
+.stProgress > div > div > div > div {
+    background-color: #7F011F !important;
+}

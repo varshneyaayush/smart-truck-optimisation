@@ -1,0 +1,62 @@
+{
+  "description": "Predefined vehicle catalogue for Optimove. Internal dimensions (L, W, H in cm) and door opening dimensions (W, H in cm) are based on standard logistics fleet benchmarks for 14ft, 17ft, and 20ft medium/light commercial trucks. Verification flag indicates whether physical fleet measurement has been confirmed.",
+  "vehicles": [
+    {
+      "id": "T1",
+      "label": "14 ft Medium Box Truck",
+      "category": "14 ft",
+      "nominal_volume_m3": 15.63,
+      "max_payload_kg": 3500.0,
+      "internal_length_cm": 420.0,
+      "internal_width_cm": 205.0,
+      "internal_height_cm": 190.0,
+      "door_width_cm": 195.0,
+      "door_height_cm": 180.0,
+      "is_verified": false,
+      "verification_status": "Unverified - Reference Geometric Estimate (Verify fleet specs before physical loading)",
+      "curb_weight_kg": 2800.0,
+      "max_gross_weight_kg": 6300.0,
+      "axle_load_limit_front_kg": 2500.0,
+      "axle_load_limit_rear_kg": 4000.0,
+      "notes": "Ideal for urban distribution, retail delivery, and parcel freight."
+    },
+    {
+      "id": "T2",
+      "label": "17 ft Heavy-Duty Cargo Carrier",
+      "category": "17 ft",
+      "nominal_volume_m3": 23.50,
+      "max_payload_kg": 5000.0,
+      "internal_length_cm": 510.0,
+      "internal_width_cm": 215.0,
+      "internal_height_cm": 215.0,
+      "door_width_cm": 205.0,
+      "door_height_cm": 205.0,
+      "is_verified": false,
+      "verification_status": "Unverified - Reference Geometric Estimate (Verify fleet specs before physical loading)",
+      "curb_weight_kg": 3700.0,
+      "max_gross_weight_kg": 8700.0,
+      "axle_load_limit_front_kg": 3200.0,
+      "axle_load_limit_rear_kg": 5800.0,
+      "notes": "Regional haulage, palletized goods, FMCG distribution."
+    },
+    {
+      "id": "T3",
+      "label": "20 ft High-Capacity Freight Master",
+      "category": "20 ft",
+      "nominal_volume_m3": 36.32,
+      "max_payload_kg": 7500.0,
+      "internal_length_cm": 600.0,
+      "internal_width_cm": 230.0,
+      "internal_height_cm": 240.0,
+      "door_width_cm": 220.0,
+      "door_height_cm": 230.0,
+      "is_verified": false,
+      "verification_status": "Unverified - Reference Geometric Estimate (Verify fleet specs before physical loading)",
+      "curb_weight_kg": 4500.0,
+      "max_gross_weight_kg": 12000.0,
+      "axle_load_limit_front_kg": 4200.0,
+      "axle_load_limit_rear_kg": 8200.0,
+      "notes": "Inter-city line-haul, bulky equipment, high-volume palletized logistics."
+    }
+  ]
+}

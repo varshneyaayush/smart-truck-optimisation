@@ -1,0 +1,5 @@
+item_id,name,length_cm,width_cm,height_cm,unit_weight_kg,quantity,fragile,stackable,max_top_load_kg,upright_only,orientation_mode,is_late_order
+CRG-PLT-01,Standard Euro Pallet Goods,120.0,80.0,140.0,320.0,4,No,Yes,400.0,Yes,UPRIGHT_ONLY,No
+CRG-BOX-02,Electronics Cartons (Fragile),60.0,40.0,50.0,25.0,10,Yes,No,0.0,Yes,UPRIGHT_ONLY,No
+CRG-CRATE-03,Heavy Industrial Castings,90.0,70.0,65.0,180.0,6,No,Yes,500.0,No,ALL,No
+CRG-LATE-04,Priority Medical Supplies (Late Dispatch),50.0,50.0,40.0,18.0,2,Yes,No,0.0,Yes,UPRIGHT_ONLY,Yes
